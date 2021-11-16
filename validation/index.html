@@ -7,33 +7,40 @@
   <title>IT Topaz | Michael Gray</title>
   <meta name="description" content="Validation" />
   <meta name="Author" content="Mike Gray" />
-
+  <link href="assets/css/style.css" rel="stylesheet" >
 </head>
 
 <body>
-    
-    <form id ="newpatientregistration"action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-        <label for="fname">first name:</label>
+
+  <h1>New Patient Registration</h1>
+
+  <h3>Please fill out form below</h3>
+
+  <Div class="container">
+    <form id ="newpatientregistration"  action="https://brucebauer.info/assets/ITEC3650/datadump.php">
+      
+      
+        <label class= "formlabel"for="fname">first name:</label>
         <input type="text" id="fname" name="fname" size="30" maxlength="30"><br>
-        <label for="middle initial">middle initial: </label>
+        <label class= "formlabel"for="middle initial">middle initial: </label>
         <input type="text" id="middle" name="middle" size="1" maxlength="1"><br>
-        <label for="lname">last name:</label>
+        <label class= "formlabel" for="lname">last name:</label>
         <input type="text" id="lname" name="lname" size="30" maxlength="30"><br>
-        <label for="email">last name:</label>
+        <label class= "formlabel" for="email">last name:</label>
         <input type="text" id="email" name="email" size="30" maxlength="30"><br>
-        <label for="email">Sex:</label>
+        <label class= "formlabel" for="email">Sex:</label>
         <label for="male"><input type="radio" name="male" id="male" value="male">male</label>
         <label for="female"><input type="radio" name="female" id="female" value="female">female</label>
         <label for="male"><input type="radio" name="n" id="n" value="n">N/A</label><br>
-        <label for="Birthday">Birthday:</label> 
+        <label class= "formlabel" for="Birthday">Birthday:</label> 
         <input type="text" id="Birthday" name="Birthday" min="8" maxlength="8"><br> 
-        <label for="height">height(inches):</label> 
+        <label class= "formlabel" for="height">height(inches):</label> 
         <input type="text" id="height" name="height" min="3" maxlength="3"><br>
-        <label for="weight">weight(pounds):</label> 
+        <label class= "formlabel" for="weight">weight(pounds):</label> 
         <input type="text" id="weight" name="weight" min="3" maxlength="3"><br>
-        <label for="phonenumber">phone number:</label> 
+        <label class= "formlabel" for="phonenumber">phone number:</label> 
         <input type="text" id="phonenumber" name="phonenumber" min="14" maxlength="14"><br>
-        <label for="maritalstatus">Marital Status:</label> 
+        <label class= "formlabel" for="maritalstatus">Marital Status:</label> 
         <select name="maritalstatus" id="maritalstatus"> 
         <option value=""> select a status </option> 
         <option value="s">single </option> 
@@ -42,11 +49,11 @@
         <option value="l">legally separated </option>
         <option value="w">widowed </option>
         </select><br>
-        <label for="address">address:</label> 
+        <label class= "formlabel" for="address">address:</label> 
         <input type="address" id="address" name="address" min="30" maxlength="30"><br>
-        <label for="city">city:</label> 
+        <label class= "formlabel" for="city">city:</label> 
         <input type="city" id="city" name="city" min="30" maxlength="30"><br>
-        <label for="state">state:</label> 
+        <label class= "formlabel" for="state">state:</label> 
         <select name="state">
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>
@@ -99,22 +106,19 @@
           <option value="WI">Wisconsin</option>
           <option value="WY">Wyoming</option>
         </select><br>
-        <label for="zip">zip:</label>
+        <label class= "formlabel" for="zip">zip:</label>
         <input type="zip" id="zip" name="zip" size="5" maxlength="5"><br>
-        <label for="taking medications">taking medications:</label> 
-        <select name="Taking Medications">
-          <option value=""> select an option </option> 
-          <option value="yes">yes</option>
-          <option value="no">no</option>
-          </select><br>
-
+        <label class= "formlabel" for="medications">taking medications:</label> 
+        <label for="yes"><input type="radio" name="y" id="y" value="y">yes</label>
+        <label for="no"><input type="radio" name="n" id="n" value="n">no</label><br><br>
+        <label class= "formlabel" for="zip">if yes,list medications here:</label>
+        <textarea name="medications" cols="25" rows="5"></textarea>
         <br>
-
+         <br>
         <input type="submit" value="submit patient form">
  
 
-
-
+      </Div>
     </form>
 
 
