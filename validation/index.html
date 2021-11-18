@@ -8,6 +8,9 @@
   <meta name="description" content="Validation" />
   <meta name="Author" content="Mike Gray" />
   <link href="assets/css/style.css" rel="stylesheet" >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
 </head>
 
 <body>
@@ -21,7 +24,9 @@
       
       
         <label class= "formlabel"for="fname">first name:</label>
-        <input type="text" id="fname" name="fname" size="30" maxlength="30"><br>
+        <input type="text" id="fname" name="fname" size="30" maxlength="30" data-rule-required="true" data-msg-required="First Name is Required" >
+        <label for="fname" class="error"></label><br/>
+
         <label class= "formlabel"for="middle initial">middle initial: </label>
         <input type="text" id="middle" name="middle" size="1" maxlength="1"><br>
         <label class= "formlabel" for="lname">last name:</label>
@@ -123,7 +128,7 @@
 
       </Div>
     </form>
-
+    
 
 
 
@@ -132,7 +137,14 @@
 
     
 </body>
+<script>
+  $( "#newpatientregistration" ).validate({
+  
+  });
+ </script>
 
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 
 </html>

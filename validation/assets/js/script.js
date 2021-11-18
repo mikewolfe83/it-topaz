@@ -1,0 +1,5 @@
+
+ 
+ $( "#newpatientregistration" ).validate({
+ 
+ });
