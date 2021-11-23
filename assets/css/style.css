@@ -1,0 +1,79 @@
+/*  main css     */
+
+html{
+    box-sizing: border-box;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: black;
+}
+
+img{
+
+max-width: 50%;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 50%;
+}
+
+/* main header */
+
+header.primary{
+    background-color:black;
+    text-align:center;
+    padding: 6px 10px 6px 10px;
+}
+
+header.primary h1{
+    color: goldenrod;
+    font-size: 3.0rem;
+    margin: 20px 0;
+}
+
+header.primary nav {
+     
+     margin: 20px auto;
+
+}
+
+header.primary nav ul{
+       display:flex;
+       flex-direction:row;
+       justify-content:space-between;
+       padding: 0;
+}
+
+header.primary nav ul li{
+       list-style: none;
+       font-size: 5.0 rem;
+}
+
+header.primary nav ul li a{
+        text-decoration: none;
+        font-size: 1.5rem;
+        color:goldenrod;
+}
+
+header.primary nav ul li a:link, header.primary nav ul li a:visted{
+    color:ghostwhite;
+    text-decoration: none;
+    background-color: honeydew;
+
+}
+
+header.primary nav ul li a:hover {
+            background-color: white;
+}
+
+ul.foot{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 50px auto;
+}
