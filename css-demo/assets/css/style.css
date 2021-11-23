@@ -40,9 +40,20 @@ html{
 body{
     background-color: #262626;
     font-family: 'Cairo', sans-serif;
-    color:#A6A6A6
+    color:#A6A6A6;
+    margin: 0;
     
 }
+
+/* -----Utility classes------- */
+
+.container {
+    width:70vw;
+    max-width:900px;
+    margin: 40px auto;
+  }
+
+/* -----Main Header------- */
 
 header.primary{
     background-color:#0D0D0D ;
@@ -57,10 +68,21 @@ header.primary h1{
     margin:20px 0;
 }
 
+header.primary h1 a{
+    color:#fff;
+    text-decoration: none;
+}
+
+header.primary h1 a:hover{
+    color:dimgrey;
+}
+
 header.primary h2{
     font-size:2rem;
     margin: 20px auto 40px;
 }
+
+/* -----Header Nav------- */
 
 header.primary nav{
     width:70vw;
@@ -79,6 +101,7 @@ header.primary nav ul li{
     list-style-type:none;
 }
 
+
 header.primary nav ul li a:link,
 header.primary nav ul li a:visited{
     color:#fff;
@@ -93,6 +116,8 @@ header.primary nav ul li a:visited{
 header.primary nav ul li a:hover, header.primary nav ul li a:active {
         background-color: skyblue;
 }
+
+/* -----Media config------- */
 
 @media screen(max-width:710px) {
     
@@ -112,3 +137,76 @@ header.primary nav ul li a:hover, header.primary nav ul li a:active {
 }
 
 
+/* -----Section CSS------- */
+
+#intro h2{
+    text-align: center;
+    
+}
+
+#intro{
+
+    padding-bottom:.9rem;
+    padding-right: .9rem;
+    padding-left: .9rem;
+    box-shadow: 4px 6px 8px white;
+}
+
+/* -----Article CSS------- */
+
+#content.container{
+    display: flex;
+    flex-wrap: row;
+    justify-content: space-between;
+}
+
+article.post{
+    width:30%;
+    box-shadow: 0 4px 8px white;
+    padding:.6rem;
+    font-size: .9rem;
+    transition: .5rem;
+}
+
+article.post:hover{
+    box-shadow:0 8px 16px cyan;  
+}
+
+article.post figure{
+    margin:0;
+  }
+
+  article a:hover, article a:active{
+    text-decoration:none;
+  }
+
+  /* -----Aside CSS------- */
+
+  aside p{
+    padding-bottom:.9rem;
+    padding-right: .9rem;
+    padding-left: .9rem;
+    box-shadow: 4px 6px 8px white;
+  }
+
+  aside footer{
+      text-align: center;
+    box-shadow: 2px 2px 2px white;
+    display: none;
+  }
+
+
+  /* -----footer CSS------- */
+
+  #colophon{
+      background-color: darkgray;
+      padding: 5px;
+      
+  }
+
+  #colophon h6{ 
+      margin 0;
+      text-align:center;
+      color:rgba(12, 12, 12, 1);
+      font-size:.9rem;
+  }
