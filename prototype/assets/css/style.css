@@ -1,0 +1,142 @@
+/* prototype Css */
+
+
+
+/* Color Theme Swatches in Hex */
+.Light-breaks-through-the-autumn-leaves-of-trees-1-hex { color: #3d321f; }
+.Light-breaks-through-the-autumn-leaves-of-trees-2-hex { color: #F28705; }
+.Light-breaks-through-the-autumn-leaves-of-trees-3-hex { color: #D98F4E; }
+.Light-breaks-through-the-autumn-leaves-of-trees-4-hex { color: #D94814; }
+.Light-breaks-through-the-autumn-leaves-of-trees-5-hex { color: #BF3B3B; }
+
+/* Color Theme Swatches in RGBA */
+.Light-breaks-through-the-autumn-leaves-of-trees-1-rgba { color: rgba(242, 174, 48, 1); }
+.Light-breaks-through-the-autumn-leaves-of-trees-2-rgba { color: rgba(242, 135, 4, 1); }
+.Light-breaks-through-the-autumn-leaves-of-trees-3-rgba { color: rgba(216, 142, 78, 1); }
+.Light-breaks-through-the-autumn-leaves-of-trees-4-rgba { color: rgba(216, 72, 19, 1); }
+.Light-breaks-through-the-autumn-leaves-of-trees-5-rgba { color: rgba(191, 59, 59, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Light-breaks-through-the-autumn-leaves-of-trees-1-hsla { color: hsla(39, 88, 56, 1); }
+.Light-breaks-through-the-autumn-leaves-of-trees-2-hsla { color: hsla(33, 96, 48, 1); }
+.Light-breaks-through-the-autumn-leaves-of-trees-3-hsla { color: hsla(28, 64, 57, 1); }
+.Light-breaks-through-the-autumn-leaves-of-trees-4-hsla { color: hsla(16, 83, 46, 1); }
+.Light-breaks-through-the-autumn-leaves-of-trees-5-hsla { color: hsla(0, 52, 49, 1); }
+
+/* Box Sizing  */
+
+html{
+    box-sizing: border-box;
+}
+
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin:0;
+
+}
+
+header.primary  {
+    background-color: #F28705;
+    text-align: center;
+    color:#3d321f;
+    padding: 20px 40px;
+   
+}
+
+header.primary h1{
+    font-size:2.8 rem;
+    margin:20px 0px;
+}
+
+header.primary nav{
+    width: 40vw;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+header.primary nav ul{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding:0;
+
+}
+
+header.primary nav ul li{
+    list-style-type: none;
+}
+
+header.primary nav ul li a:link,
+header.primary nav ul li a:visited {
+    color:#3d321f;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    transition: .5s;
+    border: 1px solid #3d321f;
+
+}
+
+header.primary nav ul li a:hover,
+header.primary nav ul li a:active{
+    background-color: cornsilk;
+}
+
+div.article1{
+
+    background-color: #3d321f;
+    text-align: center;
+    padding: 5rem;
+    
+}
+
+div.article1 h2{
+    color:#F28705;
+
+}
+
+div.article1 iframe{
+    box-shadow:0 4px 8px cornsilk;
+}
+
+div.article1 h3{
+    color:#F28705;
+}
+
+div.article1 ol li{
+    list-style-type: none;
+    color:#F28705;
+}
+
+div.article2{
+    background-color: #F28705;
+    text-align: center;
+    padding: 5rem;
+}
+
+div.article2 h2{
+    color:#3d321f
+
+}
+
+div.article2 h3{
+    color:#3d321f;
+}
+
+div.article2 ul li{
+    list-style-type: none;
+}
+
+div.article3{
+    background-color: #D94814;
+    text-align: center;
+    padding: 5rem;
+}
+
