@@ -15,37 +15,70 @@
 
 <body>
 
-  <h1>New Patient Registration</h1>
+  <Header class="primary">
+       <nav>
+          <ul>
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Services</a></li>
+            <li><a>Contact</a></li>
+  </ul>
+         
+
+       </nav>
+
+       <h1>New Patient Registration</h1>
 
   <h3>Please fill out form below</h3>
 
-  <Div class="container">
+  </Header>
+
+  
+
+  <div class="container">
     <form id ="newpatientregistration"  action="https://brucebauer.info/assets/ITEC3650/datadump.php">
       
       
-        <label class= "formlabel"for="fname">first name:</label>
+        <label class= "formlabel"for="fname">First Name:</label>
         <input type="text" id="fname" name="fname" size="30" maxlength="30" data-rule-required="true" data-msg-required="First Name is Required" >
         <label for="fname" class="error"></label><br/>
 
-        <label class= "formlabel"for="middle initial">middle initial: </label>
-        <input type="text" id="middle" name="middle" size="1" maxlength="1"><br>
+        <label class= "formlabel"for="middle initial">Middle Initial: </label>
+        <input type="text" id="middle" name="middle" size="1" maxlength="1" data-rule-required="true" data-msg-required="Middle Name is Required">
+        <label for="middle" class="error"></label><br/>
+
         <label class= "formlabel" for="lname">last name:</label>
-        <input type="text" id="lname" name="lname" size="30" maxlength="30"><br>
+        <input type="text" id="lname" name="lname" size="30" maxlength="30" data-rule-required="true" data-msg-required="Last Name Name is Required">
+        <label for="lname" class="error"></label><br/>
+
         <label class= "formlabel" for="email">last name:</label>
-        <input type="text" id="email" name="email" size="30" maxlength="30"><br>
-        <label class= "formlabel" for="email">Sex:</label>
+        <input type="text" id="email" name="email" size="30" maxlength="30" data-rule-required="true" data-msg-required="Email Address is Required">
+        <label for="email" class="error"></label><br/>
+
+        <label class= "formlabel" for="sex">Sex:</label>
         <label for="male"><input type="radio" name="male" id="male" value="male">male</label>
+
         <label for="female"><input type="radio" name="female" id="female" value="female">female</label>
         <label for="male"><input type="radio" name="n" id="n" value="n">N/A</label><br>
-        <label class= "formlabel" for="Birthday">Birthday:</label> 
-        <input type="text" id="Birthday" name="Birthday" min="8" maxlength="8"><br> 
-        <label class= "formlabel" for="height">height(inches):</label> 
-        <input type="text" id="height" name="height" min="3" maxlength="3"><br>
-        <label class= "formlabel" for="weight">weight(pounds):</label> 
-        <input type="text" id="weight" name="weight" min="3" maxlength="3"><br>
+
+        <label class= "formlabel" for="birthday">Birthday:</label> 
+        <input type="text" id="birthday" name="birthday" min="8" maxlength="8" data-rule-required="true" data-msg-required="Birth Date is Required"><br>
+        <label for="birthday" class="error"></label><br/> 
+
+        <label class= "formlabel" for="height">Height(inches):</label> 
+        <input type="text" id="height" name="height" min="3" maxlength="3" data-rule-required="true" data-msg-required="Height is Required">
+        <label for="height" class="error"></label><br/>
+
+        <label class= "formlabel" for="weight">Weight(pounds):</label> 
+        <input type="text" id="weight" name="weight" min="3" maxlength="3" data-rule-required="true" data-msg-required="Weight is Required">
+        <label for="weight" class="error"></label><br/>
+
         <hr>
-        <label class= "formlabel" for="phonenumber">phone number:</label> 
-        <input type="text" id="phonenumber" name="phonenumber" min="14" maxlength="14"><br>
+        <label class= "formlabel" for="phonenumber">Phone Number:</label> 
+        <input type="text" id="phonenumber" name="phonenumber" min="14" maxlength="14" data-rule-required="true" data-msg-required="Phone Number is Required"><br>
+        <label for="phonenumber" class="error"></label><br/>
+
+
         <label class= "formlabel" for="maritalstatus">Marital Status:</label> 
         <select name="maritalstatus" id="maritalstatus"> 
         <option value=""> select a status </option> 
@@ -55,10 +88,14 @@
         <option value="l">legally separated </option>
         <option value="w">widowed </option>
         </select><br>
-        <label class= "formlabel" for="address">address:</label> 
-        <input type="address" id="address" name="address" min="30" maxlength="30"><br>
+        <label class= "formlabel" for="Address">Address:</label> 
+        <input type="address" id="address" name="address" min="30" maxlength="30" data-rule-required="true" data-msg-required="Address is Required">
+        <label for="address" class="error"></label><br/>
+
         <label class= "formlabel" for="city">city:</label> 
         <input type="city" id="city" name="city" min="30" maxlength="30"><br>
+        <label for="city" class="error"></label><br/>
+        
         <label class= "formlabel" for="state">state:</label> 
         <select name="state">
           <option value="AL">Alabama</option>
@@ -113,20 +150,22 @@
           <option value="WY">Wyoming</option>
         </select><br>
         <label class= "formlabel" for="zip">zip:</label>
-        <input type="zip" id="zip" name="zip" size="5" maxlength="5"><br>
+        <input type="zip" id="zip" name="zip" size="5" maxlength="5" data-rule-required="true" data-msg-required="Zip Code is Required"><br>
+        <label for="zip" class="error"></label><br/>
         <hr>
-        <label class= "formlabel" for="medications">taking medications:</label> 
+        <label class= "formlabel" for="medications">Taking Medications:</label> 
         <label for="yes"><input type="radio" name="y" id="y" value="y">yes</label>
         <label for="no"><input type="radio" name="n" id="n" value="n">no</label><br><br>
         <label class= "formlabel" for="zip">if yes,list medications here:</label>
-        <textarea name="medications" cols="25" rows="5"></textarea>
+        <textarea name="medications" cols="25" rows="5" data-rule-required="true" data-msg-required="Zip Code is Required"></textarea>
+        <label for="medications" class="error"></label><br/>
         <br>
          <br>
          <hr>
         <input type="submit" value="Submit Patient Form">
  
 
-      </Div>
+      </div>
     </form>
     
 
