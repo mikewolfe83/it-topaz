@@ -29,21 +29,63 @@ body {
 	width: 800px;
 	margin-right: auto;
 	margin-left: auto;
+    display: grid;
+    padding-top: 20px;
+    padding-right: .8rem;
 }
+
+.box{
+    width:369px;
+    height:150px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    
+    
+
+}
+
+
 #red {
 	background-color: #900;
+    grid-column: 1 ;
+    grid-row: 1;
+    
+   
+    
+    
 }
 #green {
 	background-color: #090;
+    grid-column: 2 ;
+    grid-row: 1;
+    
+    
 }
 #blue {
 	background-color: #00F;
+    grid-column: 1 ;
+    grid-row: 2;
+    
 }
 #purple {
 	background-color: #63C;
+
+    grid-column: 2 ;
+    grid-row: 2;
+    
+    
 }
 #footer {
 	background-color: #666;
+    grid-column: 1/3;
+    grid-row: 3;
+    height: 2rem;
+    width: 48rem
+   
+    
+     
+    
+    
 }
 h1 {
 	color: #000;
@@ -56,11 +98,12 @@ h1 {
 <body>
 <h1>Exercise 1</h1>
 <div id="wrapper">
-  <div id="red">Red</div>
-  <div id="green">Green</div>
-  <div id="blue">Blue</div>
-  <div id="purple">Purple</div>
-  <div id="footer">Footer</div>
+
+  <div id="red" class="box">Red</div>
+  <div id="green" class="box">Green</div>
+  <div id="blue" class="box">Blue</div>
+  <div id="purple" class="box">Purple</div>
+  <div id="footer" class="box">Footer</div>
 </div>
 </body>
 </html>
