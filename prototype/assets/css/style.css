@@ -140,3 +140,29 @@ div.article3{
     padding: 5rem;
 }
 
+footer.primary{
+    background-color: #3d321f;
+    text-align: center;
+    padding: .2rem;
+}
+
+footer.primary h6{
+    color:cornsilk;
+
+}
+
+@media screen and (max-width:710px){
+    header.primary nav ul{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    header.primary nav li{
+        margin-bottom: 10px;
+
+    }
+
+    header.primary a {
+        display: block;
+    }
+}
