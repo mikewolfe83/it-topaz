@@ -29,21 +29,66 @@ body {
 	width: 800px;
 	margin-right: auto;
 	margin-left: auto;
+	
 }
+
+
+
+
+
+
 #red {
 	background-color: #900;
+	width:175px;
+	height:150px;
+	float:left;
+    margin-top:20px;
+	margin-left:20px;
+	margin-right:10px;
+	margin-bottom:20px;
+	
+
+	
 }
 #green {
 	background-color: #090;
+	width:175px;
+	height:150px;
+	float:left;
+    margin-top:20px;
+	margin-left:8px;
+	margin-right:10px;
+	margin-bottom:20px;
+	
 }
 #blue {
 	background-color: #00F;
+	width:175px;
+	height:150px;
+	float:left;
+	margin-top:20px;
+	margin-left:10px;
+	margin-right:20px;
+	margin-bottom:20px;
 }
 #purple {
 	background-color: #63C;
+	width:175px;
+	height:150px;
+	float: left;
+	margin-top:20px;
+	
+
+	
 }
 #footer {
 	background-color: #666;
+	clear:both;
+	margin-top:20px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom: 20px;
+	
 }
 h1 {
 	color: #000;
@@ -55,12 +100,21 @@ h1 {
 
 <body>
 <h1>Exercise 1</h1>
-<div id="wrapper">
-  <div id="red">Red</div>
-  <div id="green">Green</div>
-  <div id="blue">Blue</div>
-  <div id="purple">Purple</div>
-  <div id="footer">Footer</div>
+
+<div id="wrapper" class="flex-container">
+  <header class="primary">
+   <nav>	  
+  <ul><div id="red" class="box">Red</div> </ul> 
+  <ul><div id="green" class="box">Green</div></ul> 
+  <ul><div id="blue" class="box">Blue</div></ul> 
+  <ul><div id="purple" class="box">Purple</div></ul> 
+</nav>
+</header>	
+  <div id="footer" class="footer">Footer</div>
+  
 </div>
+
+
+
 </body>
 </html>
