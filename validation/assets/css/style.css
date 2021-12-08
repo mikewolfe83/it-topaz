@@ -1,3 +1,71 @@
+/* validation Css     */
+
+html{
+    box-sizing: border-box;
+}
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Readex Pro', sans-serif;
+    margin:0;
+    
+}
+
+header.primary{
+    background: url(https://images.unsplash.com/photo-1636116461481-4c3ec444c9f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1166&q=80)no-repeat center/
+    cover;
+    text-align: center;
+    color:#fff;
+    text-shadow: 2px 2px #000;
+    padding:15px 20px;
+   
+}
+header.primary nav{
+    width:70vw;
+    margin: 20px auto;
+    max-width:900px;
+}
+header.primary nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:2rem;
+    
+}
+
+header.primary nav ul li{
+    list-style: none;
+}
+
+header.primary nav ul li a:link,
+header.primary nav ul li a:visited{
+    color:lightcoral;
+    text-decoration:none;
+    background-color: lightseagreen;
+    padding: 8px 16px;
+    border-radius: 8px 16px;
+    transition: .5s;
+    border: 1px solid rgba(0,0,0,.8);
+}
+
+header.primary nav ul li a:hover,
+header.primary nav ul li a:active{
+    background-color: rgba(0,0,0,.8);
+}
+
+
+header.primary h1{
+    margin:20px 0;
+
+}
+
+header.primary h2{
+    font-size: 2.8rem;
+    
+}
 div.container{
     text-align: center;
 }
