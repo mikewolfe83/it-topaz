@@ -120,3 +120,21 @@ section#home{
     cover;
 }
 
+section#about{
+    background: url(../img/pose.JPG) no-repeat center/
+    cover;
+    background-position: top;
+}
+
+section#assignments{
+    background: url(../img/lake.jpg) no-repeat center/
+    cover;
+    background-position: top;
+}
+
+section#micflair{
+    background: url(../img/phone.JPG) no-repeat center/
+    cover;
+    background-position: top;
+    opacity: .5;
+}
