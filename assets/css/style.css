@@ -111,6 +111,7 @@ section{
 
 section p{
     font-size: 1.5rem;
+    color: cornsilk;
 
 }
 
@@ -137,4 +138,5 @@ section#micflair{
     cover;
     background-position: top;
     opacity: .5;
+    
 }
