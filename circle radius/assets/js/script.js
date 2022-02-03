@@ -1,13 +1,14 @@
-$( "#CircleForm" ).validate({
+//$( "#CircleForm" ).validate({ //
 
-});
+//});//
 
 function displayarea() {
     // if the form is valid, then make the calculations
     if ($("#CircleForm").valid()) {
         
          document.getElementById("area").innerHTML = "";
-
+         var radius; // string representation of the radius
+		 var radiusfp; // floating point value of radius	
          var diameter; // string representation of the diameter
          var diameterfp; // floating point value of diameter
          var circumference; // string representation of the diameter
@@ -16,10 +17,16 @@ function displayarea() {
          var result; // displayable result
 
          // read in the legs as a string
-         diameter = document.getElementById("diameter").value;
-         circumference = document.getElementById("circumference").value;
+         radius = document.getElementById("radius").value;
+         //diameter = document.getElementById("diameter").value;//
+         //circumference = document.getElementById("circumference").value;//
+
+         diameter = 2*radius
+
+         circumference = 2*Math.PI*radius
 
          // Convert numbers from strings to Floating Point
+         radiusfp = parseFloat( radius );
          diameterfp = parseFloat( diameter ); 
          circumferencefp = parseFloat( circumference ); 
 
@@ -35,11 +42,13 @@ function displayarea() {
   // returns area of a right triangle
   // square root of diameter squared plus circumference squared
   {
-      return Math.sqrt((diametervalue*diametervalue) + (circumferencevalue*circumferencevalue));
+      return Math.sqrt((diametervalue*2) + (circumferencevalue*2*Math.PI));
   }
   
   function clearForm()
 {
+    document.getElementById("radius").value = "";
+    document.getElementById("radiuserror").innerHTML = "";
     document.getElementById("diameter").value = "";
     document.getElementById("diametererror").innerHTML = "";
     document.getElementById("circumference").value = "";
