@@ -10,7 +10,7 @@
     </head>
 
     <body>
-    <form id="CircleForm">
+    <form id="CircleForm" onsubmit="return false">
         <h2>Circle Calculations</h2>
         <label for="radius" class="formlabel">Enter radius of a circle:</label>
         <input type="text" id="radius" name="radius"
@@ -20,21 +20,17 @@
         <label for="radius" class="error" id="radiuserror"></label>
         <br>
         
-        <label for="diameter" class="formlabel">Diameter:</label><span id="diameter"></span><br>
-        <label for="circumference" class="formlabel">Circumference:</label><span id="circumference"></span><br>
-        <label for="area" class="formlabel">Area:</label><span id="area"></span><br>
+        <span id="diameter">Diameter:</span><br>
+        <br>
+        <span id="circumference">Circumference:</span><br>
+        <br>
+        <span id="area">Area:</span><br>
         <br><br>
-        <input type="submit" value="Calculate" id="btnSubmit">
-        <input type="submit" value="Clear" id="btnSubmit">
+        <input type="submit" value="Calculate" id="btnCalc" onclick="displayArea()">
+        <input type="submit" value="Clear" id="btnClear" onclick="clearForm()" formnovalidate>
     </form>
     </body>
-        
-        <script>
-            $( "#CircleForm" ).validate({
-
-            });
-        </script>
-
-        <script src="assets/js/script.js"></script>
+    
+     <script src="assets/js/script.js"></script>   
 </html>
 

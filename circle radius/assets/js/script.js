@@ -1,51 +1,81 @@
-//$( "#CircleForm" ).validate({ //
+$( "#CircleForm" ).validate({ 
 
-//});//
+});
 
-function displayarea() {
+function displayArea() {
     // if the form is valid, then make the calculations
     if ($("#CircleForm").valid()) {
         
          document.getElementById("area").innerHTML = "";
-         var radius; // string representation of the radius
-		 var radiusfp; // floating point value of radius	
-         var diameter; // string representation of the diameter
-         var diameterfp; // floating point value of diameter
-         var circumference; // string representation of the diameter
-         var circumferencefp; // floating point value of diameter
-         var area;  // floating point area
-         var result; // displayable result
+		 // string representation of the radius
+           var radius;
+		   
+		 // floating point value of radius
+		   var radiusfp;
 
-         // read in the legs as a string
-         radius = document.getElementById("radius").value;
-         //diameter = document.getElementById("diameter").value;//
-         //circumference = document.getElementById("circumference").value;//
+         // Diameter value
+		    var diameter
 
-         diameter = 2*radius
+         // Diameter circumference
+		    var circumference
 
-         circumference = 2*Math.PI*radius
+         // floating point value of diameter		  
+		   var diameterfp;
+		   
+		 // floating point value of diameter	
+		   var circumferencefp;
+		   
+		 // floating point area
+		   var area;  
+		 
+		 
+		 // read in the legs as a string
+            radius = document.getElementById("radius").value;
+		 
+		 // convert to a fp number
+           radiusfp = parseFloat(radius); 
+		 
+		 // Convert numbers from strings to Floating Point
+		   //diameterfp = parseFloat( diameter ); 
+           //circumferencefp = parseFloat( circumference );
+		   
+		 // calculate the area
+           area = calcArea(radiusfp);
+           diameter = calcDiameter(radiusfp);
+           circumference = calcCircumference(radiusfp); 
 
-         // Convert numbers from strings to Floating Point
-         radiusfp = parseFloat( radius );
-         diameterfp = parseFloat( diameter ); 
-         circumferencefp = parseFloat( circumference ); 
+        //display Circ & Dia
+         document.getElementById("diameter").innerHTML = diameter.toString();
+         document.getElementById("circumference").innerHTML = circumference.toString();  
+		   
+		 //display the area
+			document.getElementById("area").innerHTML = area.toString();
+		}
+	}		
 
-         // calculate the area
-         area = calcarea(diameterfp, circumferencefp);
+        //calc diameter
 
-         // display the area
-         document.getElementById("area").innerHTML = area.toString();
-    }
-}
+        function calcDiameter(radiusvalue){
+            return 2 * radiusvalue
+        }
 
-  function calcarea (diametervalue, circumferencevalue)
-  // returns area of a right triangle
-  // square root of diameter squared plus circumference squared
-  {
-      return Math.sqrt((diametervalue*2) + (circumferencevalue*2*Math.PI));
-  }
-  
-  function clearForm()
+        //calc circumfrence 
+        
+        function calcCircumference(radiusvalue){
+            return 2 * Math.PI *radiusvalue
+        }
+
+         //function that returns the radius value 
+		 
+		   function calcArea(radiusvalue){
+		   
+		   return Math.PI * radiusvalue * radiusvalue;
+		   
+		   }
+
+
+         
+        function clearForm()
 {
     document.getElementById("radius").value = "";
     document.getElementById("radiuserror").innerHTML = "";
