@@ -7,6 +7,7 @@ function displayArea() {
     if ($("#CircleForm").valid()) {
         
          document.getElementById("area").innerHTML = "";
+
 		 // string representation of the radius
            var radius;
 		   
@@ -19,25 +20,17 @@ function displayArea() {
          // Diameter circumference
 		    var circumference
 
-         // floating point value of diameter		  
-		   var diameterfp;
-		   
-		 // floating point value of diameter	
-		   var circumferencefp;
-		   
 		 // floating point area
 		   var area;  
 		 
 		 
-		 // read in the legs as a string
+		 // get the value of raduis form the form
             radius = document.getElementById("radius").value;
 		 
-		 // convert to a fp number
+		 // convert radius value string to a floating point number
            radiusfp = parseFloat(radius); 
 		 
-		 // Convert numbers from strings to Floating Point
-		   //diameterfp = parseFloat( diameter ); 
-           //circumferencefp = parseFloat( circumference );
+		
 		   
 		 // calculate the area
            area = calcArea(radiusfp);
