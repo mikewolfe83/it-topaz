@@ -55,3 +55,39 @@ body{
 .navbar ul li a:hover {
         color:skyblue;
 }
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width:100%;
+    height:100vh;
+    scroll-snap-align: center;
+ }
+
+ section h1{
+    font-size: 2rem;
+
+}
+
+section p{
+    font-size: 1.0rem;
+
+}
+
+section ul{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 50px auto;
+
+}
+
+section#home{
+    background: url('/spacex/assets/img/dragon-in-space.jpg') no-repeat center/ cover;
+    
+}
+ 
