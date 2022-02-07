@@ -77,17 +77,44 @@ section p{
 
 }
 
-section ul{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-    padding: 0;
-    margin: 50px auto;
+#intro{
 
+    padding-bottom:.9rem;
+    padding-right: .9rem;
+    padding-left: .9rem;
+    box-shadow: 4px 6px 8px white;
+}
+
+article.main{
+    width:30%;
+    box-shadow: 0 4px 8px rgb(92, 89, 89);
+    padding: 2rem;
+    font-size: .9rem;
+    transition: .5rem;
+    padding-bottom: 10rem;
+    margin-bottom:40px;
+    margin-top: 120px;
+}
+
+article.post{
+    width:30%;
+    box-shadow: 0 4px 8px rgb(92, 89, 89);
+    padding: 2rem;
+    padding-top: 3rem;
+    font-size: .9rem;
+    transition: .5rem;
+}
+
+article.post img{
+    max-width: 50%;
+}
+
+article.post:hover{
+    box-shadow:0 8px 16px rgb(195, 199, 199);  
 }
 
 section#home{
     background: url('/spacex/assets/img/dragon-in-space.jpg') no-repeat center/ cover;
-    
+   
 }
  
