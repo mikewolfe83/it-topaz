@@ -63,7 +63,7 @@ section{
     justify-content: center;
     text-align: center;
     width:100%;
-    height:100vh;
+    height:150vh;
     scroll-snap-align: center;
  }
 
@@ -118,3 +118,11 @@ section#home{
    
 }
  
+section#history{
+    background: url('/spacex/assets/img/dragon-capsule-5.jpg') no-repeat center/ cover;
+   
+}
+
+section#faqs{
+    background: url('/spacex/assets/img/dragoncrew.8k.jpg') no-repeat center/ cover; 
+}
