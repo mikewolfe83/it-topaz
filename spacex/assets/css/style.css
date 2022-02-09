@@ -34,10 +34,12 @@ body{
     
 }
 
-.logo-image{
+.img-fluid{
     position:absolute;
-    margin-top: 15px;
-    margin-left: 10px;
+    margin: 0 1rem;
+    padding: 1rem;
+    
+    
 }
 
 
@@ -52,8 +54,8 @@ body{
 }
 
 .navbar ul li{
-    margin: 0 1rem;
-    padding: 1rem;
+    margin: 0 3rem;
+    padding: 2.5rem;
 }
 
 .navbar ul li a {
@@ -63,7 +65,7 @@ body{
 }
 
 .navbar ul li a:hover {
-        color:skyblue;
+        color:rgb(3, 4, 5);
 }
 
 section{
@@ -75,6 +77,12 @@ section{
     width:100%;
     height:100vh;
     scroll-snap-align: center;
+ }
+
+ section#landing video{
+     
+     background: 
+     height: 100vh;
  }
 
  section h1{
