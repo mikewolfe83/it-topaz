@@ -79,6 +79,37 @@ section{
     scroll-snap-align: center;
  }
 
+ #buttonContainer{
+     
+     width:320px;
+     height: 150px;
+     position: absolute;
+     top:58vh;
+     left: 0;
+     right: 0;
+     margin-left: auto;
+     margin-right: 400px;
+     }
+
+     #buttonone, #buttontwo{
+         background-color: rgb(172, 111, 20);
+         padding: 10px;
+         font-family: Arial, Helvetica, sans-serif;
+         border-radius: 20px;
+
+
+     }
+
+
+     #buttonone{
+         float: left;
+     }
+
+     #buttontwo{
+         float: right;
+     }
+
+
  section#landing video{
      
      background: 
