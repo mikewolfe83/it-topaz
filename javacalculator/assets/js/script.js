@@ -46,6 +46,10 @@ function calculate() {
             result = (operand1fp + operand2fp);
             } else if (operator == "-"){
             result = (operand1fp-operand2fp);
+            }else if (operator== "*"){
+            result = (operand1fp*operand2fp);    
+            }else if (operator == "/"){
+            result = (operand1fp/operand2fp);    
             }
         }     
     
