@@ -117,6 +117,11 @@ section{
      
  }
 
+ section#home img{
+     margin-top: 20px;
+     margin-bottom: 30px;
+ }
+
  section h1{
     font-size: 4rem;
 
