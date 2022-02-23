@@ -52,39 +52,36 @@
             <label for="Operator" class="error" id="OperatorMsg"></label>
             <br><br>
 
-            <label class="formlabel">To Value: </label>
-                <label for="cm">
+            <label class="formlabel">To Unit: </label>
+                <label for="convertOperator">
                     <input type="radio" name="cm" id="cm" value = "cm"
                            data-rule-required="true" data-msg-required="Operator is Required" />centimeters
                 </label>
-                <label for="m">
+                <label for="convertOperator">
                     <input type="radio" name="m" id="m" value = "m">meters
                 </label>
-                <label for="km">
+                <label for="convertOperator">
                     <input type="radio" name="km" id="km" value = "km">kilometers
                 </label>
-                <label for="in">
+                <label for="convertOperator">
                     <input type="radio" name="in" id="in" value = "in">inches
                 </label>
-                <label for="ft">
+                <label for="convertOperator">
                     <input type="radio" name="ft" id="ft" value = "ft">feet
                 </label>
-                <label for="yd">
+                <label for="convertOperator">
                     <input type="radio" name="yd" id="yd" value = "yd">yards
                 </label>
-                <label for="mi">
+                <label for="convertOperator">
                     <input type="radio" name="mi" id="mi" value = "mi">miles
                 </label>
 
             
-            <label for="Operator" class="error" id="OperatorMsg"></label>
+            <label for="Operator2" class="error" id="OperatorMsg"></label>
             <br><br>
 
-            <label class="formlabel" for="Operand2">To Value: </label>
-            <input type="text" id="Operand2" name="Operand2" size="15" maxlength="15"
-                    data-rule-required="true"  data-msg-required="Value is Required" 
-                    data-rule-number="true" data-msg-number="Value must be a Number">
-            <label for="Operand2" class="error" id="Operand2Msg"></label>
+            <label class="formlabel">To Value: </label>
+            <span id="Result"></span>
             <br><br>
 
             <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
