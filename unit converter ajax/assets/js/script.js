@@ -12,45 +12,71 @@ function calculate() {
 
     // Operator
         // Get the value associated with the operator that was checked (+, -, *, or /)
-        var operator;
+        var convert;
 
         if (document.getElementById("cm").checked) {
-            operator = document.getElementById("cm").value;
+            convert = document.getElementById("cm").value;
         }
         if (document.getElementById("m").checked) {
-            operator = document.getElementById("m").value;
+            convert = document.getElementById("m").value;
         }
         if (document.getElementById("km").checked) {
-            operator = document.getElementById("km").value;
+            convert = document.getElementById("km").value;
         }
         if (document.getElementById("in").checked) {
-            operator = document.getElementById("in").value;
+            convert = document.getElementById("in").value;
         }
         if (document.getElementById("ft").checked) {
-            operator = document.getElementById("ft").value;
+            convert = document.getElementById("ft").value;
         }
         if (document.getElementById("yd").checked) {
-            operator = document.getElementById("yd").value;
+            convert = document.getElementById("yd").value;
         }
         if (document.getElementById("mi").checked) {
-            operator = document.getElementById("mi").value;
+            convert= document.getElementById("mi").value;
+        }
+
+        //operator 2
+         // Get the value associated with the operator that was checked (+, -, *, or /)
+         var convert2;
+
+         if (document.getElementById("cm2").checked) {
+            convert2 = document.getElementById("cm").value;
+        }
+        if (document.getElementById("m2").checked) {
+            convert2 = document.getElementById("m").value;
+        }
+        if (document.getElementById("km2").checked) {
+            convert2 = document.getElementById("km").value;
+        }
+        if (document.getElementById("in2").checked) {
+            convert2 = document.getElementById("in").value;
+        }
+        if (document.getElementById("ft2").checked) {
+            convert2 = document.getElementById("ft").value;
+        }
+        if (document.getElementById("yd2").checked) {
+            convert2 = document.getElementById("yd").value;
+        }
+        if (document.getElementById("mi2").checked) {
+            convert2 = document.getElementById("mi").value;
         }
 
         // Operand 2
-        var operand2 = document.getElementById("Operand2").value;
+        //var operand2 = document.getElementById("Operand2").value;
         
 
-        CalculateResult(operand1, operator, operand2);
+        CalculateResult(operand1, convert, convert2);
     }
 }
 
 async function CalculateResult(operand1, operator, operand2) {
         
     // URL and method used with AJAX Call
-    var myURL = "https://brucebauer.info/assets/ITEC3650/ajaxcalculator.php";
+    var myURL = "https://brucebauer.info/assets/ITEC3650/unitsconversion.php";
 
     /* AJAX calculator requires Operand1, Operator, and Operand2 */
-    myURL = myURL + "?Operand1=" + encodeURIComponent(operand1) + "&Operator=" + encodeURIComponent(operator) + "&Operand2=" + encodeURIComponent(operand2);
+    myURL = myURL + "?FromValue=" + encodeURIComponent(operand1) + "&FromUnit=" + encodeURIComponent(operator) + "&ToUnit=" + encodeURIComponent(operand2);
 
     /* fetch the results */
     let myCalcObject = await fetch(myURL);
@@ -72,6 +98,13 @@ function clearform() {
     document.getElementById("ft").innerHTML = "";
     document.getElementById("yd").value = "";
     document.getElementById("mi").innerHTML = "";
+    document.getElementById("cm2").checked = false;
+    document.getElementById("m2").checked = false;
+    document.getElementById("km2").checked = false;
+    document.getElementById("in2").checked = false;
+    document.getElementById("ft2").innerHTML = "";
+    document.getElementById("yd2").value = "";
+    document.getElementById("mi2").innerHTML = "";
     document.getElementById("Result").innerHTML = "";
 }
 
