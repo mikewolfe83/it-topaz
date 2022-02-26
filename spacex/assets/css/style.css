@@ -45,6 +45,25 @@ body{
     
 }
 
+
+ /* column */
+
+ .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    
+  }
+
+
+
   /* Img Gallery */
 
   #gallerycontainer{
@@ -58,7 +77,7 @@ body{
 
   div.gallery {
     margin: 20px;
-    border: 1px solid #ccc;
+   /* border: 1px solid #ccc; */
     float: left;
     width: 180px;
   }
@@ -80,7 +99,7 @@ body{
   /* list container  */
 
   .listcontainer h3{
-      padding: 10px;
+      padding: 3px;
   }
 
   .listcontainer ul {
@@ -175,17 +194,29 @@ section{
      margin-bottom: 30px;
  }
 
- section h1{
-    font-size: 4rem;
+ section#home h1{
+    font-size: 3rem;
+    padding-top: 3rem;
 
+}
+
+ /* History Section  */
+
+section#history h1{
+    font-size: 3rem;
+
+}
+
+section#history p{
+    font-size: 1.5rem;
 }
 
 section h2 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 section h3 {
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 section p{
