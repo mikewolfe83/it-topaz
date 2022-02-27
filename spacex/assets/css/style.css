@@ -10,8 +10,10 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: #333;
-    color:#fff;
-    line-height: 1.6;
+    color:white;
+    font-size: 1rem;
+    -webkit-text-stroke-width: .5px; 
+    -webkit-text-stroke-color: rgb(14, 47, 233);
     height: 100vh;
     /*overflow:hidden;*/
     
@@ -72,7 +74,7 @@ body{
 
   #gallerycontainer p{
       margin-top: 15em;
-      font-size: 1rem;
+      font-size: 5rem;
   }
 
   div.gallery {
@@ -209,7 +211,20 @@ section#history h1{
 
 section#history p{
     font-size: 1.5rem;
+    
+  /* -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: white; */
+
 }
+
+section#history table{
+    padding-top: 10px;
+}
+
+
+
+
+/* History Section ending */
 
 section h2 {
     font-size: 2rem;
@@ -233,6 +248,8 @@ section p{
 section#home{
     background: url('/spacex/assets/img/dragon-in-space.jpg') no-repeat center/ 
     cover;
+
+    
    
 }
  
