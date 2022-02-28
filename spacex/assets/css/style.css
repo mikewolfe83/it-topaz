@@ -164,7 +164,7 @@ section{
      margin-right: 400px;
      }
 
-     #buttonone, #buttontwo,#buttonthree{
+     #buttonone, #buttontwo,#buttonthree,#buttonfour,#buttonfive{
          background-color: rgb(172, 111, 20);
          padding: 10px;
          font-family: Arial, Helvetica, sans-serif;
@@ -205,7 +205,7 @@ section{
 }
 
 .content{
-    padding-bottom: 40rem;
+    padding-bottom: 10rem;
 }
 
 #buttonthree a{
@@ -230,14 +230,28 @@ section#history p{
 
 }
 
-section#history table{
-    padding-top: 10px;
-}
+
+
+
 
 
 
 
 /* History Section ending */
+
+ /* FAQ Section  */
+
+section#faqs h1{
+   font-size: 3rem;
+
+}
+
+section#faqs p {
+    font-size: 2.5rem;
+}
+
+
+ /* FAQ Section ending  */ 
 
 section h2 {
     font-size: 2rem;
