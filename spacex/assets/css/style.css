@@ -65,6 +65,16 @@ body{
   }
 
 
+/* signup page */
+
+#signup{
+    background-color: white;
+    height: 120vh;
+}
+
+
+
+/* signup page ending */
 
   /* Img Gallery */
 
@@ -175,7 +185,7 @@ section{
      }
 
      #buttonone, #buttontwo,#buttonthree,#buttonfour,#buttonfive,#buttonsix{
-         background-color: rgb(172, 111, 20);
+         
          padding: 10px;
          font-family: Arial, Helvetica, sans-serif;
          border-radius: 20px;
@@ -183,10 +193,25 @@ section{
 
      }
 
+     #buttonone:hover, #buttontwo:hover,#buttonthree:hover,#buttonfour:hover,#buttonfive:hover,#buttonsix:hover{
+         background: white;
+         
+
+     }
+
 
      #buttonone{
          float: left;
+         border-radius: 20px;
+         border-color: bisque;
      }
+
+     #buttonone a{
+         text-decoration: none;
+
+     }
+
+     
 
      #buttontwo{
          float: right;
@@ -215,10 +240,21 @@ section{
 }
 
 .content{
-    padding-bottom: 10rem;
+    padding-bottom: 8rem;
+    
 }
 
 #buttonthree a{
+    text-decoration:none;
+
+}
+
+#buttonfour a{
+    text-decoration:none;
+
+}
+
+#buttonfive a{
     text-decoration:none;
 
 }
@@ -227,11 +263,19 @@ section{
 
 #buttonsix {
     margin-top: 15rem;
+    padding-bottom: 10rem;
+    
    
 }
 
+#buttonsix a{
+text-decoration:none;
+}
 
 
+.gallerybutton{
+    margin-right: 900px;
+}
 
  /* History Section  */
 
@@ -293,9 +337,7 @@ section#faqs p {
 
 }
 
-section#faqcontent hr{
-    
-}
+
   
   /* faqcontent Section Closing*/
 
@@ -304,7 +346,7 @@ section h2 {
 }
 
 section h3 {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 section p{
