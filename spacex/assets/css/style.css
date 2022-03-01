@@ -9,7 +9,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: #333;
+    background: rgb(10, 10, 10);
     color:white;
     font-size: 1rem;
     -webkit-text-stroke-width: .5px; 
@@ -60,7 +60,7 @@ body{
 .column {
     float: left;
     width: 30%;
-    padding: 10px;
+    
     
   }
 
@@ -69,7 +69,9 @@ body{
   /* Img Gallery */
 
   #gallerycontainer{
-    float: left;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #gallerycontainer p{
@@ -78,14 +80,16 @@ body{
   }
 
   div.gallery {
-    margin: 20px;
+    margin: 25px;
    /* border: 1px solid #ccc; */
     float: left;
     width: 180px;
+    padding-left: 14em;
+    padding-top:12em;
   }
   
   div.gallery:hover {
-    border: 1px solid #777;
+    
   }
   
   div.gallery img {
@@ -100,8 +104,13 @@ body{
 
   /* list container  */
 
+  .row{
+      padding-top: 5em;
+      padding-left: 10em;
+  }
+
   .listcontainer h3{
-      padding: 3px;
+      padding: 5px;
   }
 
   .listcontainer ul {
@@ -110,7 +119,8 @@ body{
 
   .listcontainer li {
       text-decoration: none;
-      font-size: 15px;
+      font-size: 1.2em;
+      padding:1em;
   }
  
 
@@ -164,7 +174,7 @@ section{
      margin-right: 400px;
      }
 
-     #buttonone, #buttontwo,#buttonthree,#buttonfour,#buttonfive{
+     #buttonone, #buttontwo,#buttonthree,#buttonfour,#buttonfive,#buttonsix{
          background-color: rgb(172, 111, 20);
          padding: 10px;
          font-family: Arial, Helvetica, sans-serif;
@@ -213,6 +223,14 @@ section{
 
 }
 
+/* Gallery  Section  */
+
+#buttonsix {
+    margin-top: 15rem;
+   
+}
+
+
 
 
  /* History Section  */
@@ -239,6 +257,20 @@ section#history p{
 
 /* History Section ending */
 
+/* historycontent Section  */
+
+.table{
+    margin-top: 10em;
+}
+
+section#historycontent table{
+    width: 70em;
+    border: 4;
+}
+
+
+/* historycontent Section ending */
+
  /* FAQ Section  */
 
 section#faqs h1{
@@ -252,6 +284,20 @@ section#faqs p {
 
 
  /* FAQ Section ending  */ 
+
+
+  /* faqcontent Section  */
+
+  section#faqcontent p{
+      padding:1em;
+
+}
+
+section#faqcontent hr{
+    
+}
+  
+  /* faqcontent Section Closing*/
 
 section h2 {
     font-size: 2rem;
