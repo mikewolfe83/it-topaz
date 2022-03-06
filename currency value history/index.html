@@ -16,14 +16,60 @@
          <form>
 
             <div class="formcontainer">
+              <h2>Stock Ticker Details</h2>
+              <label for="StockSymbol" class="formlabel" >Enter Symbol: </label>
+              <!--<label for="DisplayStock" class="formlabel" ></label>-->
+              <input type="text" id="StockSymbol" name="StockSymbol" size="6" maxlength="6"
+                      data-rule-required="true"  data-msg-required="Value is Required">
+              <label class="error" for="StockSymbol" id="StockSymbolError"></label><br>
+              <label class="formlabel">From Date:</label>
+              <input type="date" name="FromDate" id="FromDate" 
+                  data-rule-required="true" data-msg-required="From Date is Required">
+              <label id="FromDateError" for="FromDate" class="error"></label>
+              <label class="formlabel">To Date:</label>
+              <input type="date" name="ToDate" id="ToDate" 
+             data-rule-required="true" data-msg-required="To Date is Required">
+          <label id="ToDateError" for="ToDate" class="error"></label>
+              <br><br>
+              <input type="button" value="DisplayStock" id="DisplayStock" name="DisplayStock" onclick="GetStock();">
+              <input type="button" value="Clear" id="Clear" name="Clear" onclick="ClearForm();">
+              <hr>
+              <br>
+            <label for="company" class="formlabel">Company: </label>
+            <span id="company"></span><br>
+            <label for="address" class="formlabel">Address: </label>
+            <span id="address"></span><br>
+            <label for="employees" class="formlabel">Employees: </label>
+            <span id="employees"></span><br>
+            <label for="ceo" class="formlabel">CEO: </label>
+            <span id="ceo"></span><br>
+            <label for="url" class="formlabel">URL: </label>
+            <a id="url"></a><br>
+            <label for="logo" class="formlabel">Logo: </label>
+            <img id="logo"><br>
+            <hr>
+
+            <div class="clearfix">
+                    <div class="img-container">
+                        <span id="StockValueTable"></span>
+                    </div><!-- img-container closing div -->
+                    <div class="img-container">
+                        <span id="StockVolumeTable"></span>
+                    </div><!-- img-container closing div -->
+           </div><!-- clearfix closing div -->
+           <hr>
+           <div class="clearfix">
+                    <div class="img-container">
+                          <canvas id="chartjs-0" width="400" height="400"></canvas>
+                    </div><!-- img-container closing div -->
+                    <div class="img-container">
+                          <canvas id="chartjs-1" width="400" height="400"></canvas>
+                    </div><!-- img-container closing div -->
+           </div><!-- clearfix closing div -->
 
 
 
-
-
-
-
-            </div>
+            </div><!-- formcontainer  -->
 
          </form>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
