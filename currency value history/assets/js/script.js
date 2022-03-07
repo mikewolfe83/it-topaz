@@ -75,33 +75,33 @@ async function GetCurrency() {
                     }
                 }
                   /* convert these tables to currency conversion */
-                var stockvaluetable = "";
+                var currencyvaluetable = "";
                 if (numdays > 0) {
-                    stockvaluetable = stockvaluetable + "<table><caption>Stock Price</caption><tr><th>Date</th><th>Price</th></tr>";
+                    currencyvaluetable = currencyvaluetable + "<table><caption>Stock Price</caption><tr><th>Date</th><th>Price</th></tr>";
                     for (var i = 0; i < numdays; i++) {
-                        stockvaluetable = stockvaluetable + "<tr><td>" + stockdate[i] + "</td><td>" + stockvalue[i] + "</td></tr>";
+                        currencyvaluetable = currencyvaluetable + "<tr><td>" + currencyvalue[i] + "</td><td>" + currencyvalue[i] + "</td></tr>";
                     }
-                    stockvaluetable = stockvaluetable + "</table>"
-                    document.getElementById("StockValueTable").innerHTML = stockvaluetable;
+                    currencyvaluetable = currencyvaluetable + "</table>"
+                    document.getElementById("currencyValueTable").innerHTML = currencyvaluetable;
                 }
                 
-                var stockvolumetable = "";
+                var currencyvolumetable = "";
                 if (numdays > 0) {
-                    stockvolumetable = stockvolumetable + "<table><caption>Stock Volume</caption><tr><th>Date</th><th>Volume</th></tr>";
+                    currencyvolumetable = currencyvolumetable + "<table><caption>Stock Volume</caption><tr><th>Date</th><th>Volume</th></tr>";
                     for (var i = 0; i < numdays; i++) {
-                        stockvolumetable = stockvolumetable + "<tr><td>" + stockdate[i] + "</td><td>" + stockvolume[i] + "</td></tr>";
+                        currencyvolumetable = currencyvolumetable + "<tr><td>" + currencydate[i] + "</td><td>" + currencyvolume[i] + "</td></tr>";
                     }
-                    stockvolumetable = stockvolumetable + "</table>"
-                    document.getElementById("StockVolumeTable").innerHTML = stockvolumetable;
+                    currencyvolumetable = currencyvolumetable + "</table>"
+                    document.getElementById("currencyVolumeTable").innerHTML = currencyvolumetable;
                 }
 
                 var ctx0 = document.getElementById("chartjs-0");
                 var myChart = new Chart(ctx0, {
                     "type":"line",
                     "data": {
-                        "labels": stockdate,
+                        "labels": currencydate,
                         "datasets":[{"label":"Stock Close",
-                        "data": stockvalue,
+                        "data": currencyvalue,
                         "fill":false,
                         "borderColor":"rgb(75, 192, 192)",
                         "lineTension":0.1}]},
@@ -118,7 +118,7 @@ async function GetCurrency() {
                     "data": {
                         "labels": stockdate,
                         "datasets":[{"label":"Stock Volume",
-                        "data": stockvolume,
+                        "data": currencyvolume,
                         "fill":false,
                         "borderColor":"rgb(75, 192, 192)",
                         "lineTension":0.1}]},
@@ -139,18 +139,13 @@ async function GetCurrency() {
 }
 
 function ClearForm() {
-    document.getElementById("StockSymbol").value = "";
-    document.getElementById("FromDate").value = "";
-    document.getElementById("ToDate").value = "";
-    document.getElementById("company").innerHTML = "";
-    document.getElementById("address").innerHTML = "";
-    document.getElementById("employees").innerHTML = "";
-    document.getElementById("ceo").innerHTML = "";
-    document.getElementById("url").innerHTML = "";
-    document.getElementById("url").href = "";
-    document.getElementById("logo").src = "";
-    document.getElementById("StockValueTable").innerHTML = "";
-    document.getElementById("StockVolumeTable").innerHTML = "";
+    document.getElementById("close").value = "";
+    document.getElementById("highest").value = "";
+    document.getElementById("lowest").value = "";
+    document.getElementById("transactions").innerHTML = "";
+    document.getElementById("msec").innerHTML = "";
+    document.getElementById("volume").innerHTML = "";
+    
     
     /* Ugly Code to Erase Canvas */
     var canvas0 = document.getElementById("chartjs-0");
