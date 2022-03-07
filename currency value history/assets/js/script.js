@@ -1,6 +1,6 @@
 //currency value script
 
-async function GetStock() {
+async function GetCurrency() {
     "use strict";
 
     // Get a reference to the form - Use the ID of the form
@@ -12,13 +12,14 @@ async function GetStock() {
     // If all of the form elements are valid, the get the form values
     if (form.valid()) {
         
-        var StockSymbol = document.getElementById("StockSymbol").value;
-        var apiKey = "35eaVfKsObXpSg2O4kMLj9udr2DgVW1f"
+        var base = document.getElementById("base").value;
+        var convert = document.getElementById("convert").value;
+        var apiKey = "uZBb74dea680CgzC_UU24bugKdxBktth"
         var FromDate = document.getElementById("FromDate").value;
         var ToDate = document.getElementById("ToDate").value;
 
         /* URL for AJAX Call */
-        var myURL1 = "https://api.polygon.io/v1/meta/symbols/" + StockSymbol + "/company?apiKey=" + apiKey;
+        var myURL1 = "https://api.polygon.io/v2/aggs/ticker/C:" + base + convert +"/range/1/day/"+ FromDate + ToDate +"/company?apiKey=" + apiKey;
         /* Make the AJAX call */
         var msg1Object = await fetch(myURL1);
         /* Check the status */
@@ -28,13 +29,13 @@ async function GetStock() {
             var msg1 = JSON.parse(msg1JSONText);
             /* Your code to process the result goes here - 
                display the returned message */
-            document.getElementById("company").innerHTML = msg1.name;
-            document.getElementById("address").innerHTML = msg1.hq_address;
-            document.getElementById("employees").innerHTML = msg1.employees;
-            document.getElementById("ceo").innerHTML = msg1.ceo;
-            document.getElementById("url").innerHTML = msg1.url;
-            document.getElementById("url").href = msg1.url;
-            document.getElementById("logo").src = msg1.logo;
+            document.getElementById("close").innerHTML = msg1.close;
+            document.getElementById("highest").innerHTML = msg1.highest;
+            document.getElementById("lowest").innerHTML = msg1.lowest;
+            document.getElementById("transactions").innerHTML = msg1.transactions;
+            document.getElementById("msec").innerHTML = msg1.msec;
+            document.getElementById("volume").href = msg1.volume;
+            
         }
         else {
             /* AJAX complete with error - probably invalid stock ticker symbol */
@@ -57,23 +58,23 @@ async function GetStock() {
                display the returned message */
                 /* Your code to process the result goes here  
                     display the returned message */
-                var stockdate = [];
-                var stockvalue = [];
-                var stockvolume = [];
+                var currencydate = [];
+                var currencyvalue = [];
+                var currencyvolume = [];
                 var numdays = msg2.results.length;
                 if (numdays > 0) {
                     for (var i = 0; i < numdays; i++) {
                         /* stock close value */
-                        stockvalue[i] = msg2.results[i].c;
+                        currencyvalue[i] = msg2.results[i].c;
                         /* stock volume */
-                        stockvolume[i] = msg2.results[i].v;
+                        currencyvolume[i] = msg2.results[i].v;
                         /* date is in Unix milleseconds - create a temporary date variable */
                         var tempdate = new Date(msg2.results[i].t);
                         /* extract the date string from the value */
-                        stockdate[i] = tempdate.toLocaleDateString();
+                        currencydate[i] = tempdate.toLocaleDateString();
                     }
                 }
-
+                  /* convert these tables to currency conversion */
                 var stockvaluetable = "";
                 if (numdays > 0) {
                     stockvaluetable = stockvaluetable + "<table><caption>Stock Price</caption><tr><th>Date</th><th>Price</th></tr>";
