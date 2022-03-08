@@ -360,6 +360,35 @@ section p{
 
 }
 
+/*---- footer -----*/
+
+footer{
+    background:blue;
+    text-align: center;
+    border-radius: 5px;
+    font-size:2rem;
+    padding:10px 20px;
+    background-size: contain;
+    
+} 
+
+footer a{
+    color:#fcfbf8;
+}
+
+footer a:hover,
+footer a:hover{
+    color:#000;
+}
+
+#wufoo-z18iy62a00se9ir{
+    background-color: #ffff;
+}
+
+ #techs {
+text-align: center;
+}
+
 	
 
 
