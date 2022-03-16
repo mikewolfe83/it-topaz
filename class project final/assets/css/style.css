@@ -176,3 +176,10 @@ section#faqs{
     background: url(../img/dragoncrew.8k.jpg) no-repeat center/ 
     cover; 
 }
+
+/* signup page */
+
+#signup{
+    background-color: white;
+    height: 120vh;
+}
