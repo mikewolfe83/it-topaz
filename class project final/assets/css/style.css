@@ -153,6 +153,10 @@ section h3 {
 
 /* home section */
 
+section#home p{
+    font-size: 2.6rem;
+}
+
 section#home{
     background: url(../img/dragon-in-space.jpg) no-repeat center/ 
     cover;
@@ -163,6 +167,19 @@ section#home{
 
 /*history section */
 
+section#history h1{
+    font-size: 3rem;
+
+}
+
+section#history p{
+    font-size: 2.6rem;
+    
+  /* -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: white; */
+
+}
+
 section#history{
     background: url(../img/dragon-capsule-5.jpg) no-repeat center/ 
     cover;
@@ -171,6 +188,10 @@ section#history{
 
 
 /*faqs section */
+
+section#faqs p {
+    font-size: 2.6rem;
+}
 
 section#faqs{
     background: url(../img/dragoncrew.8k.jpg) no-repeat center/ 
@@ -182,4 +203,63 @@ section#faqs{
 #signup{
     background-color: white;
     height: 120vh;
+}
+
+/* gallery page */
+
+.gallerybody{
+    background-color:darkgray;
+}
+
+.galleryimg{
+    max-width:100%;
+}
+
+.fadecontainer{
+
+    margin:40px auto;
+    width:70vw;
+    /* Set Max Content Width */
+    max-width:700px;
+}
+
+/* Customize Previous/Next/Dots/Autoplay */
+
+.slick-autoplay-toggle-button,
+.slick-prev .slick-prev-icon, .slick-next .slick-next-icon,
+.slick-dots li button .slick-dot-icon,
+.slick-dots li.slick-active button .slick-dot-icon {
+  color: white;
+}
+
+/* Customize Previous/Next/Dots/Autoplay - Active State */
+
+.slick-next:focus .slick-next-icon,
+.slick-next:focus .slick-prev-icon,
+.slick-prev:focus .slick-next-icon,
+.slick-prev:focus .slick-prev-icon,
+.slick-dots li button:focus .slick-dot-icon:before,
+.slick-dots li.slick-active button:focus .slick-dot-icon,
+.slick-autoplay-toggle-button:focus 
+{
+    color:black;
+}
+
+/* history content page */
+
+
+
+section#historycontent{
+    background: black;
+}
+
+section#historycontent table{
+    width: 70em;
+    border: 4;
+}
+
+/* faq content page */
+
+section#faqcontent{
+    background: black;
 }
