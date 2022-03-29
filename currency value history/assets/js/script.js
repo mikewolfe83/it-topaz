@@ -19,7 +19,7 @@ async function GetCurrency() {
         var ToDate = document.getElementById("ToDate").value;
 
         /* URL for AJAX Call */
-        var myURL1 = "https://api.polygon.io/v2/aggs/ticker/C:" + base + convert +"/range/1/day/"+ FromDate + ToDate +"/company?apiKey=" + apiKey;
+        var myURL1 = "https://api.polygon.io/v2/aggs/ticker/C:" + base + "/range/1/day/" + FromDate + "/" + ToDate + "?adjusted=true&sort=asc&limit=120&apiKey=" +apiKey;
         /* Make the AJAX call */
         var msg1Object = await fetch(myURL1);
         /* Check the status */
@@ -46,14 +46,17 @@ async function GetCurrency() {
         }        
  
         /* URL for AJAX Call */
-        var myURL2 = "https://api.polygon.io/v2/aggs/ticker/" + StockSymbol + "/range/1/day/" + FromDate + "/" + ToDate + "?unadjusted=false&sort=asc&limit=32&apiKey=" + apiKey;
+        var myURL2 = "https://api.polygon.io/v2/aggs/ticker/C:" + convert + "/range/1/day/" + FromDate + "/" + ToDate + "?adjusted=true&sort=asc&limit=120&apiKey=" + apiKey;
+        
         /* Make the AJAX call */
         var msg2Object = await fetch(myURL2);
+       
         /* Check the status */
         if (msg2Object.status >= 200 && msg2Object.status <= 299) {            
             var msg2JSONText = await msg2Object.text();
             // Parse the JSON string into an object
             var msg2 = JSON.parse(msg2JSONText);
+            
             /* Your code to process the result goes here - 
                display the returned message */
                 /* Your code to process the result goes here  
@@ -77,17 +80,17 @@ async function GetCurrency() {
                   /* convert these tables to currency conversion */
                 var currencyvaluetable = "";
                 if (numdays > 0) {
-                    currencyvaluetable = currencyvaluetable + "<table><caption>Stock Price</caption><tr><th>Date</th><th>Price</th></tr>";
+                    currencyvaluetable = currencyvaluetable + "<table><caption>Currency Value</caption><tr><th>Date</th><th>Price</th></tr>";
                     for (var i = 0; i < numdays; i++) {
-                        currencyvaluetable = currencyvaluetable + "<tr><td>" + currencyvalue[i] + "</td><td>" + currencyvalue[i] + "</td></tr>";
+                        currencyvaluetable = currencyvaluetable + "<tr><td>" + currencydate[i] + "</td><td>" + currencyvalue[i] + "</td></tr>";
                     }
                     currencyvaluetable = currencyvaluetable + "</table>"
                     document.getElementById("currencyValueTable").innerHTML = currencyvaluetable;
                 }
                 
-                var currencyvolumetable = "";
+                var currencyvolumetable = ""; 
                 if (numdays > 0) {
-                    currencyvolumetable = currencyvolumetable + "<table><caption>Stock Volume</caption><tr><th>Date</th><th>Volume</th></tr>";
+                    currencyvolumetable = currencyvolumetable + "<table><caption>Currency Volume</caption><tr><th>Date</th><th>Volume</th></tr>";
                     for (var i = 0; i < numdays; i++) {
                         currencyvolumetable = currencyvolumetable + "<tr><td>" + currencydate[i] + "</td><td>" + currencyvolume[i] + "</td></tr>";
                     }
