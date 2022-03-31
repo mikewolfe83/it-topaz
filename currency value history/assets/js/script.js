@@ -19,7 +19,7 @@ async function GetCurrency() {
         var ToDate = document.getElementById("ToDate").value;
 
         /* URL for AJAX Call */
-        var myURL1 = "https://api.polygon.io/v2/aggs/ticker/C:" + base + "/range/1/day/" + FromDate + "/" + ToDate + "?adjusted=true&sort=asc&limit=120&apiKey=" +apiKey;
+        var myURL1 = "https://api.polygon.io/v2/aggs/ticker/C:" + base + convert +"/range/1/day/" + FromDate + "/" + ToDate + "?adjusted=true&sort=asc&limit=120&apiKey=" +apiKey;
         /* Make the AJAX call */
         var msg1Object = await fetch(myURL1);
         /* Check the status */
@@ -29,33 +29,22 @@ async function GetCurrency() {
             var msg1 = JSON.parse(msg1JSONText);
             /* Your code to process the result goes here - 
                display the returned message */
-            document.getElementById("close").innerHTML = msg1.close;
-            document.getElementById("highest").innerHTML = msg1.highest;
-            document.getElementById("lowest").innerHTML = msg1.lowest;
-            document.getElementById("transactions").innerHTML = msg1.transactions;
-            document.getElementById("msec").innerHTML = msg1.msec;
-            document.getElementById("volume").href = msg1.volume;
+           
             
         }
-        else {
+        //else {
             /* AJAX complete with error - probably invalid stock ticker symbol */
                 /* Your code to process the result goes here - 
                    display the returned message */
-            alert("Stock Not Found - Status: " + msg1Object.status)
-            return;
-        }        
- 
-        /* URL for AJAX Call */
-        var myURL2 = "https://api.polygon.io/v2/aggs/ticker/C:" + convert + "/range/1/day/" + FromDate + "/" + ToDate + "?adjusted=true&sort=asc&limit=120&apiKey=" + apiKey;
-        
-        /* Make the AJAX call */
-        var msg2Object = await fetch(myURL2);
+           // alert("Stock Not Found - Status: " + msg1Object.status)
+            //return;
+        //}//      
        
         /* Check the status */
-        if (msg2Object.status >= 200 && msg2Object.status <= 299) {            
-            var msg2JSONText = await msg2Object.text();
-            // Parse the JSON string into an object
-            var msg2 = JSON.parse(msg2JSONText);
+       // if (msg2Object.status >= 200 && msg2Object.status <= 299) {    //        
+          //  var msg2JSONText = await msg2Object.text();//
+            // Parse the JSON string into an object//
+           // var msg2 = JSON.parse(msg2JSONText);//
             
             /* Your code to process the result goes here - 
                display the returned message */
@@ -64,15 +53,15 @@ async function GetCurrency() {
                 var currencydate = [];
                 var currencyvalue = [];
                 var currencyvolume = [];
-                var numdays = msg2.results.length;
+                var numdays = msg1.results.length;
                 if (numdays > 0) {
                     for (var i = 0; i < numdays; i++) {
                         /* stock close value */
-                        currencyvalue[i] = msg2.results[i].c;
+                        currencyvalue[i] = msg1.results[i].c;
                         /* stock volume */
-                        currencyvolume[i] = msg2.results[i].v;
+                        currencyvolume[i] = msg1.results[i].v;
                         /* date is in Unix milleseconds - create a temporary date variable */
-                        var tempdate = new Date(msg2.results[i].t);
+                        var tempdate = new Date(msg1.results[i].t);
                         /* extract the date string from the value */
                         currencydate[i] = tempdate.toLocaleDateString();
                     }
@@ -103,7 +92,7 @@ async function GetCurrency() {
                     "type":"line",
                     "data": {
                         "labels": currencydate,
-                        "datasets":[{"label":"Stock Close",
+                        "datasets":[{"label":"Currency Close",
                         "data": currencyvalue,
                         "fill":false,
                         "borderColor":"rgb(75, 192, 192)",
@@ -120,7 +109,7 @@ async function GetCurrency() {
                     "type":"line",
                     "data": {
                         "labels": stockdate,
-                        "datasets":[{"label":"Stock Volume",
+                        "datasets":[{"label":"Currency Volume",
                         "data": currencyvolume,
                         "fill":false,
                         "borderColor":"rgb(75, 192, 192)",
@@ -135,11 +124,13 @@ async function GetCurrency() {
         }
         else {
             /* AJAX completed with error - probably invalid stock ticker symbol */
-            alert("Stock Not Found - Status: " + msg2Object.status)
+            alert("Stock Not Found - Status: " + msg1Object.status)
             return
         }
     }
-}
+
+
+
 
 function ClearForm() {
     document.getElementById("close").value = "";
