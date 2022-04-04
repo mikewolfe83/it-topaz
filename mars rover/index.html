@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <!-- starting head section -->
+      <title>Mic Flair</title>
+      <meta charset="utf-8"/>
+      <meta name= "description" content="Mic Flair Content" />
+      <meta name="author" content="Michael Gray"/>
+      <meta name="keywords" content="Mike,ITTOPAZ,keyword"/>
+      <link href="assets/css/style.css" rel="stylesheet">
+          <!-- finishing up head section -->
+    </head>
+
+            <body>
+
+                <h1> Mars Rover Photo Explorer </h1>
+
+                <div class="container">
+
+                    <table class="mission">
+                        <thead>
+                          <tr>
+                            <th>Rover</th>
+                            <th>Mission Start</th>
+                            <th>Mission End</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Curiosity</td>
+                            <td>08/06/2012</td>
+                            <td>09/28/2019</td>
+                          </tr>
+                          <tr>
+                            <td>Opportunity</td>
+                            <td>01/26/2004</td>
+                            <td>06/11/2018</td>
+                          </tr>
+                          <tr>
+                            <td>Spirit</td>
+                            <td>01/05/2004</td>
+                            <td>03/21/2004</td>
+                          </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Select a rover and a picture date:</h2>
+
+                    <input type="radio" id="rover" name="rover" value="curiosity">
+                    <label for="rover">Rover</label><br>
+
+                    <input type="radio" id="opportunity" name="opportunity" value="opportunity">
+                    <label for="opportunity">Opportunity</label><br>
+
+                    <input type="radio" id="spirit" name="spirit" value="spirit">
+                    <label for="rover">Spirit</label><br>
+
+                    <label for="txtName">Picture Date: </label>
+                    <input type="text" id="txtName" name="txtName" size="20" maxlength="20"
+                        data-rule-required="true"  data-msg-required="Date is Required" >
+                    <label for="txtName" class="error"></label>
+                 
+                </div>
+
+
+
+
+            </body>
+
+</html>    

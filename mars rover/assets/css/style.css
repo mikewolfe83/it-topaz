@@ -1,0 +1,38 @@
+
+html{
+    box-sizing: border-box;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    
+    line-height: 1.6;
+    height: 100vh;
+    margin: 23px;
+
+    
+}
+
+table.mission {
+    width: 50%;
+    background-color: #695959;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-color: #9b926f;
+    border-style: solid;
+    color:black;
+  }
+  
+  table.mission td, table.mission th {
+    border-width: 2px;
+    border-color: #9b926f;
+    border-style: solid;
+    padding: 3px;
+  }
+  
+  table.mission thead {
+    background-color: #e6d07a;
+  }
