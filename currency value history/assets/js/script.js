@@ -87,13 +87,13 @@ async function GetCurrency() {
                     document.getElementById("currencyVolumeTable").innerHTML = currencyvolumetable;
                 }
 
-                var ctx0 = document.getElementById("chartjs-0");
-                var myChart = new Chart(ctx0, {
+                
+                var myChart = new Chart("myChart", {
                     "type":"line",
                     "data": {
-                        "labels": currencydate,
+                        "labels": currencyvalue,
                         "datasets":[{"label":"Currency Close",
-                        "data": currencyvalue,
+                        "data": currencydate,
                         "fill":false,
                         "borderColor":"rgb(75, 192, 192)",
                         "lineTension":0.1}]},
@@ -104,13 +104,13 @@ async function GetCurrency() {
                     }
                 );
                 
-                var ctx1 = document.getElementById("chartjs-1");
-                var myChart = new Chart(ctx1, {
+                
+                var myChart2 = new Chart("myChart2", {
                     "type":"line",
                     "data": {
-                        "labels": stockdate,
+                        "labels": currencyvolume,
                         "datasets":[{"label":"Currency Volume",
-                        "data": currencyvolume,
+                        "data": currencydate,
                         "fill":false,
                         "borderColor":"rgb(75, 192, 192)",
                         "lineTension":0.1}]},

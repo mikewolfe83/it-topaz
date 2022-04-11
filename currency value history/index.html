@@ -43,7 +43,7 @@
              data-rule-required="true" data-msg-required="To Date is Required">
              <label id="ToDateError" for="ToDate" class="error"></label>
               <br><br>
-              <input type="button" value="DisplayCurrency" id="DisplayCurrency" name="DisplayCurrency" onclick="GetCurrency();">
+              <input type="button" value="DisplayCurrency" id="DisplayCurrency" name="DisplayCurrency" onclick="GetCurrency()">
               <input type="button" value="Clear" id="Clear" name="Clear" onclick="ClearForm();">
               <hr>
               <br>
@@ -59,26 +59,28 @@
                     </div><!-- img-container closing div -->
            </div><!-- clearfix closing div -->
            <hr>
-           <div class="clearfix">
-                    <div class="img-container">
-                          <canvas id="chartjs-0" width="400" height="400"></canvas>
-                    </div><!-- img-container closing div -->
-                    <div class="img-container">
-                          <canvas id="chartjs-1" width="400" height="400"></canvas>
-                    </div><!-- img-container closing div -->
-           </div><!-- clearfix closing div -->
+
+
+           
+                          
+            
 
 
 
             </div><!-- formcontainer  -->
 
          </form>
+
+         <canvas id="myChart" width="400" height="400"></canvas>
+                    
+          <canvas id="myChart2" width="400" height="400"></canvas>
             
     </body>
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
             <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
             <script src="assets/js/script.js"></script>
 
 </html>
