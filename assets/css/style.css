@@ -145,6 +145,13 @@ section#assignments{
     background-position: top;
 }
 
+section#Javascript{
+    background: url(../img/js.png) no-repeat center/
+    cover;
+    background-position: top;
+}
+
+
 section#micflair a{
     display:flex;
     padding-bottom: 120px;
