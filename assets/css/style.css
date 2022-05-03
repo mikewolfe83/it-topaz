@@ -12,6 +12,8 @@ body{
     background-color: black;
     line-height: 1.6;
     height: 100vh;
+    width: auto;
+    overflow: hidden;
     
 }
 
@@ -44,14 +46,26 @@ section#micflair video{
 
 /* main header */
 
+.img-fluid{
+    
+    max-height: 8rem;
+    max-width: 8rem;
+    margin-top: -8px;
+    margin-right: 0;
+    margin-left:auto;
+    padding: 1rem;
+    
+    
+}
+
 header.primary{
     position: fixed;
     top:0;
     z-index: 1;
     display: flex;
     width: auto;
-    height: 60px;
-    background: rgba(0,0,0,0.7);
+    height: 62px;
+    background: rgba(0,0,0,0.7); 
 }
 
 
@@ -79,7 +93,7 @@ header.primary nav ul li{
 header.primary nav ul li a{
         text-decoration: none;
         font-size: 1.5rem;
-        color:ghostwhite;
+        color:rgb(221, 190, 11);
 }
 
 header.primary nav ul li a:link, header.primary nav ul li a:visted{
@@ -90,7 +104,7 @@ header.primary nav ul li a:link, header.primary nav ul li a:visted{
 }
 
 header.primary nav ul li a:hover {
-            background-color: white;
+            color: rgb(210, 224, 9);
 }
 
 ul.foot{
@@ -162,5 +176,12 @@ section#micflair a{
 
 section#micflair a:link{
     text-decoration: none;
+}
+
+section#logo{
+    background: url(../img/GFlamingo_2.jpg) no-repeat center/
+    cover;
+    background-position: bottom;
+}
 }
 
