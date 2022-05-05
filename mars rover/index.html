@@ -53,11 +53,13 @@
 
                      <label class="formlabel"> Rover:</label>
 
-                    <input id="rd1" name="rover" type="radio" value="Curiosity" >Curiosity </input> 
+                    <input id="rd1" onchange="getCuriosity()" name="rover" type="radio" value="Curiosity" >Curiosity </input> 
 
-                    <input id="rd2" name="rover" type="radio" value="Opportunity" >Opportunity </input>
+                    <input id="rd2" onchange="getOpportunity()" name="rover" type="radio" value="Opportunity" >Opportunity </input>
                     
-                    <input id="rd3" name="rover" type="radio" value="Spirit" >Spirit </input>
+                    <input id="rd3" onchange="getSpirit()" name="rover" type="radio" value="Spirit" >Spirit </input>
+
+                    <label for="rover" class="error" id="roverError"></label>
 
                     
                     
@@ -65,25 +67,17 @@
                     
                     <br><br>
                 
-                <label for="PictureDate">Picture Date: </label>
-                <input type="date" id="PictureDate" name="PictureDate" data-rule-required="true" data-msg-required="Date is Required">
-                <label class="error" for="PictureDate" id="PictureDateError"></label>
-                <button value="submit" onclick="getImg()" >submit</button>
-                <br><br>
-    
+                <label for="photoDate">Picture Date: </label>
+                <input type="date" id="photoDate" name="photoDate" data-rule-required="true" data-msg-required="Date is Required">
+                <label class="error" for="photoDate" id="photoDateError"></label>
                 
-                <input type="submit" value="Clear" name="Clear" onclick="clearform();" novalidate="">
+                <br><br>
+                <input type="button" value="Search" name="Search" onclick="getImg();">
+                <input type="button" value="Clear" name="Clear" onclick="clearForm();" novalidate="">
                 <p id="text1"></p>
                 <p id="text2"></p>
 
-                  <p id="text1"></p>
-                  <p id="text2"></p>
-                
-
-                
-                  
-  
-                  
+                 
 
                 <br>
 
@@ -127,11 +121,11 @@
                 
 
 
-
+              <script src="assets/js/mars.js"></script>
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
               <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
               <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-              <script src="assets/js/script.js"></script>
+              
             </body>
 
             

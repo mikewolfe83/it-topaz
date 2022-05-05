@@ -13,8 +13,8 @@ async function getImg() {
     if (form.valid()) {
 
      //make var for getting values from page
-     var PictureDate = document.getElementId("PictureDate").value;
-     var apiKey = "apS5n0gGQf84EhSXDheLf6PzZYJSXgAfrNnTlTbb"
+     var photoDate = document.getElementById("photoDate").value;
+     var apiKey = "apS5n0gGQf84EhSXDheLf6PzZYJSXgAfrNnTlTbb";
 
      //get value from selected radio button
 
@@ -30,7 +30,7 @@ async function getImg() {
          rover = document.getElementById("rd3").value;
      }
 
-     var myURL = "https://api.nasa.gov/mars-photos/api/v1/rovers/"+ rover +"/photos?earth_date="+ PictureDate +"&page=1&apiKey="+ apiKey;
+     var myURL = "https://api.nasa.gov/mars-photos/api/v1/rovers/"+ rover + "/photos?earth_date=" + photoDate + "&page=1&api_Key=" + apiKey;
      
      var myMethod = "Get";
 
@@ -41,7 +41,7 @@ async function getImg() {
                   url: myURL
                 })
 
-               .done(function( msg ) {
+               .done(function(msg) {
     
                     var numpictures = msg.photos.length;
                     if (numpictures > 0) {
@@ -73,14 +73,16 @@ async function getImg() {
             });
         }
 
-            function clearform() {
+    }
+
+        function clearForm()  {
         for (var i = 0; i < 25; i++) {
         document.getElementById("rd1").checked = false;
         document.getElementById("rd2").checked = false;
         document.getElementById("rd3").checked = false;
-        document.getElementById("PictureDate").value = "";
-        document.getElementById("RoverError").innerHTML = "";
-        document.getElementById("PictureDateError").innerHTML = "";
+        document.getElementById("photoDate").value = "";
+        document.getElementById("roverError").innerHTML = "";
+        document.getElementById("photoDateError").innerHTML = "";
         document.getElementById("image" + i).src = "#";
         document.getElementById("anchor" + i).href = "";
         document.getElementById("image" + i).title = "";
@@ -90,19 +92,19 @@ async function getImg() {
     }
 
    function getCuriosity() {
-        document.getElementById("PictureDate").value = "2012-08-06";
+        document.getElementById("photoDate").value = "2012-08-06";
     }
     
     function getOpportunity() {
-        document.getElementById("PictureDate").value = "2004-01-26";
+        document.getElementById("photoDate").value = "2004-01-26";
     }
     
     function getSpirit() {
-        document.getElementById("PictureDate").value = "2004-01-05";
+        document.getElementById("photoDate").value = "2004-01-05";
     }
    
 
- }  
+
 
 
                 
