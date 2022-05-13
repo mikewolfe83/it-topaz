@@ -43,6 +43,32 @@ section#micflair video{
      
 }
 
+/* unordered list class */
+
+.list{ 
+    list-style: none;
+    display: flex;
+  
+}
+
+.list li{
+    border: 2px solid black;
+    padding: 1em;
+    border-radius: 25px;
+    margin: 0 1.5rem;
+    background-color: gray;
+    
+}
+
+.list a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color:black;
+    background-color: gray;
+    
+}
+
+
 
 /* main header */
 
